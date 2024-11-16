@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karnita Saumya</title>
+    <style>*{
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        scroll-behavior: smooth;
+    }
+    #wrapper{
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .container{
+        width: 1500px;
+        margin: 0 auto;
+    }
+    .image,.container{
+        position:absolute;
+        z-index: -1;
+    }
+    
+    :root{
+        --bg0range: #e84949;
+    }
+    .nav-bar{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 1rem; /* align-items: center;*/
+    }
+    .logo-text{
+        
+        display: flex ;
+        font-size: 28px;
+    }
+    .nav-items{
+        display: flex;
+        gap:2rem;
+        padding:0 4em;
+    }
+    .nav-items div{
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;/*on hovering on navitems the cursor becomes hand*/
+    }
+    a{
+        text-decoration: none;/*removed unlining come from bookmarks*/
+        color: black;
+    }
+    .nav-items:hover{
+        font-weight: bold;
+        transition: 0.8s;
+    }.image{
+        height: 100%;
+        width: 100%;
+    }
+    .naming{
+        display: flex;
+        position:relative;
+        justify-content: center;
+        gap: 5rem;
+        padding: 0 1rem;
+        padding-bottom: 8rem;
+        margin: 4rem auto;
+    }
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:2rem;
+    }
+    .left1{
+        font-size: 50px;
+        line-height: 45px;
+    }
+    .left2{
+        font-size: 40px;
+    }
+    .button{
+       background-color: var(--bgorange);
+       width: fit-content;
+       color: rgb(237, 7, 7);
+       padding: 0.8rem 2.3rem;
+       box-shadow: 5px 5px 7px 0px black;
+       font-size: 18px;
+       cursor:pointer;
+       transition: all 0.5s;
+       font-weight: 500;
+       border: solid 3px transparent;
+       position: relative;
+       z-index: -1;
+    }
+    .button::before{
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        top: 0px;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: all 0.8s;
+    }
+    .button:hover::before{
+        transform: scaleX(1);
+    }
+    .button:hover{
+        border: solid 3px var(--bgorange);
+        color: black;
+    }
+    .absolute{
+        position: absolute;
+    }
+    .right2{
+        position: absolute;
+        padding: 2.5rem;
+        filter: grayscale(1);
+        transition: all 1s;
+        animation: scaleImage 5s linear infinite;
+    }
+    .self{
+        z-index: -9;
+    }
+    @keyframes scaleImage{
+        0%{
+         filter:greyscale(0);
+        transform: scale(1);   }
+        50%{
+            transform: scale(1.1);
+            filter:grayscale(0);
+            box-shadow: 3px 3px 10px black;
+        }
+        100%{
+            transform: scale(0.9);
+            filter:grayscale(1);
+        }
+    
+    }
+    .cont{
+        background-image: url("https://wallpaperaccess.com/full/5652035.jpg");
+        justify-content: center;
+    }
+    
+    .skills{
+        font-size: 120px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(10, 9, 9);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 0.5rem;
+    color: var(--primary);
+    }
+    .card-grid{
+        margin-top: 8rem;
+    }
+    .card img{
+    width: 50px;
+    background:white;
+    }
+    section.skill .card-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 2rem;
+    }
+    section.skill .card-grid .card{
+    background: var(--white);
+    padding: 3rem 2rem;
+    position: relative;
+    text-align: center;
+    transition: all .2s ease;
+    }
+    .card-grid .card img{
+        position: absolute;
+        top: -1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var();
+        }
+    section.skill .card-grid .card h2{
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        }
+    section.skill .card-grid .card p{
+        font-family: 'Lato', sans-serif;
+        color: var(--seconday);
+        line-height: 1.6;
+        }
+    section.skill .card-grid .card:hover{
+        background: var(--primary);
+        }
+    section.skill .card-grid .card:hover h2{
+        color: var(--white);
+        }
+        section.skill .card-grid .card:hover p{
+        color: var(--white);
+    }
+    .contact{
+        background-image: url("https://wallpaperaccess.com/full/5652035.jpg");
+        
+    }
+    
+    
+    
+        </style>
+</head>
+<body>
+    <div id="wrapper">
+        <img class="image" src="https://wallpaperaccess.com/full/5652035.jpg"><!--wallpaper-->
+        <div class="container">
+            <div class="nav-bar">
+               <div class="logo-text">Karnita Saumya</div>
+               <div class="nav-items">
+                   <div><a href="#home">Home</a></div>
+                   <div><a href="#education">Education</a></div>
+                   <div><a href="#Projects">Projects</a></div>
+                   <div><a href="#skills">Skills</a></div>
+                   <div><a href="#contactme">Contact Me</a></div>
+               </div>
+            </div>
+            <div class="naming">
+                <div class="left">
+                    <div class="left1">Hello,It's Me</div>
+                    <div class="left2"><h2 class="name">Karnita Saumya</h2></div>
+                    <div class="left3">I'm a <h2 class="name">Web Developer</h2></div>
+                    <div class="left4">I am a software developer and here is my portfolio website.<br>Here you'll learn about my journey as a software developer</div>
+                    <div class="button" id="button">Download CV</div>
+                </div>
+                <div class="right">
+                    <div class="absolute right2 self">
+                        <img src="C:\Users\karni\OneDrive\Pictures\Saved Pictures\Kar.jpg"
+                        width="300px";
+                        height="300px";><!--mine-->
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="skill">
+        <div class="cont">
+        <h1 class="skills">SKILLS</h1>
+        <div class="card-grid">
+        <div class="card">
+            <h2>DSA in java</h2>
+        <img src="https://th.bing.com/th/id/OIP.HFuU9HwO1H4OT56VPwJpqQHaHa?w=900&h=900&rs=1&pid=ImgDetMain"
+        width="100px";
+        height="50px";>
+        </div>
+        <div class="card">
+            <h2>HTML5</h2>
+        <img src="https://th.bing.com/th/id/OIP.Mrb8EiYMlvcRFQY384KEHwHaKd?rs=1&pid=ImgDetMain"
+        width="100px";
+        height="50px";>
+       </div>
+        <div class="card">
+            <h2>CSS</h2>
+        <img src="https://th.bing.com/th/id/OIP.yUIb5S_kj98Eg5tT-Onx1AHaHa?w=2400&h=2400&rs=1&pid=ImgDetMain" width="100px";
+        height="50px";>
+        </div>
+       </div>
+       </div>
+        </div>
+    </section>
+    <div class="contact">
+        <p>Email: <a href="mail to:karnitasaumya@gmail.com">karnitasaumya@gmail.com</a></p>
+        <p>Phone:<a href="tel:9555340197">9555340197-call</a></p>
+        <p>linkedin profile:<a href="https://www.linkedin.com/in/karnita-saumya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Karnita Saumya</a></p>
+    </div>
+</body>
+</html>
